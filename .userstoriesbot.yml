@@ -1,0 +1,11 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "npm ci && npm run build"
+  start: npm run dev:e2e -- --port {port} --host 0.0.0.0 --strictPort
+  url: http://localhost:{port}
+  readyPath: /
+  runtime: node24
+demo:
+  maxVideos: 1
+  beforePass: true
